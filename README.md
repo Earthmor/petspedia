@@ -13,6 +13,7 @@
     * STEP 1 : Install **environment**
     
             $bash ./bin/env.sh
+            
     * STEP 2 : Install **dependencies**
     
             $mvn clean install
