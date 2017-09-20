@@ -1,29 +1,32 @@
-# README #
+# PETSHOP - twotableskiller \\(o_0)/ #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+# ENVIRONMENT #
 
-### What is this repository for? ###
+* Java - 1.8.0
+* Maven - 3.3.9
+* Tomcat - 8.5.20
+* PostgreSQL - 9.6
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+# INSTALL #
 
-### How do I get set up? ###
+1. for Linux(Mint, Ubuntu)
+    * STEP 1 : Install **environment**
+    
+            $bash ./bin/env.sh
+            
+    * STEP 2 : Install **dependencies**
+    
+            $mvn clean install
+            
+# TODO #
+* ~~shell - install environment~~
+* maven - setting pom.xml
+* make backend and CRUD
+* make frontend
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+# TRASH #
+9.6 main    5432 online postgres 
+/var/lib/postgresql/9.6/main 
+/var/log/postgresql/postgresql-9.6-main.log
 
-### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
