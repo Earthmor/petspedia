@@ -20,7 +20,7 @@
             
 # TODO #
 * ~~shell - install environment~~
-* maven - setting pom.xml
+* ~~maven - setting pom.xml~~
 * make backend and CRUD
 * make frontend
 
