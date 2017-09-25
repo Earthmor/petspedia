@@ -1,0 +1,10 @@
+<ehcache xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true" monitoring="autodetect" dynamicConfig="true" maxBytesLocalHeap="250M">
+    <cache name="medicines"
+           maxBytesLocalHeap="40M"
+           eternal="false"
+           timeToIdleSeconds="300"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="none"/>
+    </cache>
+</ehcache>
