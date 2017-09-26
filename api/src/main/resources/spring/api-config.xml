@@ -9,6 +9,8 @@
 
     <context:component-scan base-package="ru.petshopedia.api.*" />
 
+    <mvc:resources mapping="/public/**" location="/public/" cache-period="31556926"/>
+
     <mvc:annotation-driven />
 
     <import resource="classpath:spring/core-config.xml"/>
