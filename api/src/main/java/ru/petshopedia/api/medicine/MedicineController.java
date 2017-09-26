@@ -33,8 +33,9 @@ public class MedicineController {
      * Получить всю информацию по лекарствам
      */
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public @ResponseBody List<Medicine> getMedicines() {
-        return medicineService.getMedicines();
+    public @ResponseBody ResponseEntity<Result> getMedicines() {
+        List<Medicine> medicines = medicineService.getMedicines();
+        return new ResponseEntity<>(new Result("OK", true, medicines), HttpStatus.OK);
     }
 
     /**
