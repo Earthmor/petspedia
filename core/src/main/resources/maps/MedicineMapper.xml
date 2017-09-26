@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ru.petshopedia.core.medicine.MedicineDao">
+    <resultMap id="medicinesMap" type="Medicine">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="customer" property="customer"/>
+        <result column="price" property="price"/>
+        <result column="stock" property="stock"/>
+        <result column="available" property="available"/>
+        <result column="create_date" property="createDate"/>
+        <result column="update_date" property="updateDate"/>
+    </resultMap>
+    <select id="getMedicines" resultMap="medicinesMap">
+        SELECT
+            m.id,
+            m.name,
+            m.customer,
+            m.price,
+            m.stock,
+            m.available,
+            m.create_date,
+            m.update_date
+        FROM pg_medicine m
+    </select>
+    <select id="getMedicineById" parameterType="Integer" resultMap="medicinesMap">
+        SELECT
+          m.id,
+          m.name,
+          m.customer,
+          m.price,
+          m.stock,
+          m.available,
+          m.create_date,
+          m.update_date
+        FROM pg_medicine m
+        WHERE
+          m.id = #{value}
+    </select>
+    <insert id="addMedicine" parameterType="Medicine">
+        INSERT INTO
+            pg_medicine
+        VALUES (
+            nextval('pg_medicine_id_seq'),
+            #{name},
+            #{customer},
+            #{price},
+            #{stock},
+            #{available},
+            current_timestamp,
+            current_timestamp
+        )
+    </insert>
+    <update id="updateMedicine" parameterType="Medicine">
+        UPDATE
+            pg_medicine
+        SET
+            name = #{name},
+            customer = #{customer},
+            price = #{price},
+            stock = #{stock},
+            available = #{available},
+            update_date = current_timestamp
+        WHERE
+          id = #{id}
+    </update>
+
+    <delete id="deleteMedicine" parameterType="Integer">
+        DELETE FROM
+            pg_medicine
+        WHERE
+            id = #{id}
+    </delete>
+</mapper>
