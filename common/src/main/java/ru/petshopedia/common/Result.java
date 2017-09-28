@@ -1,7 +1,6 @@
-package ru.petshopedia.common.utils;
+package ru.petshopedia.common;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * Результат выполсения операций
@@ -22,22 +21,12 @@ public class Result implements Serializable {
     private boolean success;
 
     /** */
-    private List data;
-
-    /** */
-    public Result(){}
+    public Result() {}
 
     /** */
     public Result(String message, boolean success) {
         this.message = message;
         this.success = success;
-    }
-
-    /** */
-    public Result(String message, boolean success, List data) {
-        this.message = message;
-        this.success = success;
-        this.data = data;
     }
 
     /**
@@ -66,19 +55,5 @@ public class Result implements Serializable {
      */
     public void setSuccess(boolean success) {
         this.success = success;
-    }
-
-    /**
-     * see {@link #data}
-     */
-    public List getData() {
-        return data;
-    }
-
-    /**
-     * see {@link #data}
-     */
-    public void setData(List data) {
-        this.data = data;
     }
 }
