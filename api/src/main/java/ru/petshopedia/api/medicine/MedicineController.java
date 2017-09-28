@@ -76,9 +76,6 @@ public class MedicineController {
     @RequestMapping(method = RequestMethod.POST, value = "/{id}", produces = "application/json")
     public @ResponseBody ResponseEntity<Result> updateMedicine(@RequestBody Medicine medicine){
         try {
-            log.info("medicine : " + medicine);
-            log.info("medicine : " + medicine.getName());
-            log.info("medicine : " + medicine.getId());
             medicineService.updateMedicine(medicine);
         } catch (Exception e){
             log.error(e.getMessage(), e);
