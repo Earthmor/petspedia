@@ -19,10 +19,23 @@
     
             $mvn clean install
             
+    * STEP 3 : Create temporary table
+        
+            $cd bin
+            $bash ./tmp_database.sh
+           
+
+# ON END OF WORK #
+
+* CLEAN TEMPORARY DATA
+        
+        $cd bin
+        $bash ./clear_all.sh
+
 # TODO #
 * ~~shell - install environment~~
 * ~~maven - setting pom.xml~~
 * ~~make backend and CRUD~~
-* make frontend
+* ~~make frontend~~
 
 
