@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/main.css">
     <script type="text/javascript" src="public/js/ext-base.js"></script>
     <script type="text/javascript" src="public/js/ext-all.js"></script>
+    <script type="text/javascript" src="public/js/RowEditor.js"></script>
     <script type="text/javascript" src="public/js/main.js"></script>
 </head>
 <body>

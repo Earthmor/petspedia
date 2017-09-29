@@ -1,5 +1,9 @@
 package ru.petshopedia.common;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.springframework.format.annotation.DateTimeFormat;
+import ru.petshopedia.common.utils.JsonDateSerializer;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -45,11 +49,13 @@ public class Medicine implements Serializable {
     /**
      * Дата создания
      */
+    @JsonSerialize(using = JsonDateSerializer.class)
     Date createDate;
 
     /**
      * Дата последнего обновления
      */
+    @JsonSerialize(using = JsonDateSerializer.class)
     Date updateDate;
 
     /** */

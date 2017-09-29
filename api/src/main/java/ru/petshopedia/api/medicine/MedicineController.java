@@ -7,7 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import ru.petshopedia.common.Medicine;
-import ru.petshopedia.common.utils.Result;
+import ru.petshopedia.common.Result;
+import ru.petshopedia.common.TableResult;
 import ru.petshopedia.core.medicine.MedicineService;
 
 import java.util.List;
@@ -33,9 +34,9 @@ public class MedicineController {
      * Получить всю информацию по лекарствам
      */
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public @ResponseBody ResponseEntity<Result> getMedicines() {
+    public @ResponseBody ResponseEntity<TableResult> getMedicines() {
         List<Medicine> medicines = medicineService.getMedicines();
-        return new ResponseEntity<>(new Result("OK", true, medicines), HttpStatus.OK);
+        return new ResponseEntity<>(new TableResult("OK", true, medicines), HttpStatus.OK);
     }
 
     /**
